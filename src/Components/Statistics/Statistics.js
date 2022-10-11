@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
      const data = useLoaderData();
-     console.log(data.data);
+     // console.log(data.data);
      const { total } = data.data;
      return (
           <div className='h-[250px] w-full'>
