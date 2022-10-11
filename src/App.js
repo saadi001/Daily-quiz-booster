@@ -1,20 +1,26 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './Components/Blog/Blog';
 import Main from './Layouts/Main';
 import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
-import ImageHeader from './Components/ImageHeader/ImageHeader';
+import LandingPage from './Components/LandingPage/LandingPage';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   const router = createBrowserRouter([
     {path:'/', element: <Main></Main>, children:[
-        {path: '/', element: <ImageHeader></ImageHeader>},
-        {path: '/topics', element: <Topics></Topics>},
+        {path: '/',  
+         element: <LandingPage></LandingPage>},
+        {path: '/topics',
+        loader: async () => {
+          return fetch('https://jsonplaceholder.typicode.com/users')
+        },
+        element: <Topics></Topics>},
         {path:'/statistics', element: <Statistics></Statistics>},
         {path: '/blog', element: <Blog></Blog>}
-    ]}
+    ]},
+    {path: '*', element:<NotFound></NotFound>}
 
   ])
   return (
