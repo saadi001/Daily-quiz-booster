@@ -4,13 +4,19 @@ import Topic from '../Topic/Topic';
 
 const Topics = () => {
      const data = useLoaderData();
-     console.log(data);
-     
+     const topics = data.data;
+     // console.log(topics);
+
      return (
           <div className='max-w-[1366px] mx-auto mt-4'>
-               <div className='w-5/6 mx-auto'>
-                    <h2>this is topic page: </h2>
-                    <Topic></Topic>
+               <div className='w-5/6 mx-auto grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4'>
+                    
+                    {
+                         topics.map(topic => <Topic
+                              key={topic.id}
+                              topic={topic}
+                              ></Topic>)
+                    }
                </div>
           </div>
      );

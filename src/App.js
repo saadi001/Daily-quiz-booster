@@ -7,6 +7,7 @@ import Topics from './Components/Topics/Topics';
 import LandingPage from './Components/LandingPage/LandingPage';
 import NotFound from './Components/NotFound/NotFound';
 
+
 function App() {
   const router = createBrowserRouter([
     {path:'/', element: <Main></Main>, children:[
@@ -14,10 +15,14 @@ function App() {
          element: <LandingPage></LandingPage>},
         {path: '/topics',
         loader: async () => {
-          return fetch('https://jsonplaceholder.typicode.com/users')
+          return fetch('https://openapi.programming-hero.com/api/quiz')
         },
         element: <Topics></Topics>},
-        {path:'/statistics', element: <Statistics></Statistics>},
+        {path:'/statistics', 
+        loader: async () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },  
+        element: <Statistics></Statistics>},
         {path: '/blog', element: <Blog></Blog>}
     ]},
     {path: '*', element:<NotFound></NotFound>}

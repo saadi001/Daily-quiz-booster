@@ -7,7 +7,7 @@ const LandingPage = () => {
      return (
           <div>
                <ImageHeader></ImageHeader>
-               <Topics></Topics>
+               {/* <Topics></Topics> */}
           </div>
      );
 };
