@@ -12,8 +12,8 @@ function App() {
     {path:'/', element: <Main></Main>, children:[
         {path: '/', element: <ImageHeader></ImageHeader>},
         {path: '/topics', element: <Topics></Topics>},
-        {path:'statistics', element: <Statistics></Statistics>},
-        {path: 'blog', element: <Blog></Blog>}
+        {path:'/statistics', element: <Statistics></Statistics>},
+        {path: '/blog', element: <Blog></Blog>}
     ]}
 
   ])

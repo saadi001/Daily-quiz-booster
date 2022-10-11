@@ -1,0 +1,6 @@
+.imageheader{
+     background: linear-gradient(rgba(70, 66, 63, 0.678), rgba(70, 66, 63, 0.678)),url('../../images/exam.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     
+}
