@@ -7,7 +7,7 @@ const Quiz = ({quiz}) => {
      const options = quiz.options;
      // console.log(quiz);
      return (
-          <div className='border rounded-md my-4 p-2 relative'>
+          <div className='border rounded-md my-8 p-2 relative'>
                <div>
                     <h4 className='text-center md:mx-20 lg:mx-40 mb-2 text-cyan-600 text-lg font-semibold'>Quiz : {question}</h4>
                </div>

@@ -1,4 +1,4 @@
-# This a educational quiz website made react.js
+# This is a educational quiz website made react.js
 
 
 ## Details about this website
