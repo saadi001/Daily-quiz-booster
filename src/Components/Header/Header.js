@@ -8,7 +8,7 @@ const Header = () => {
                <nav className='flex justify-between items-center h-16 sm:mx-10 mx-2'> 
                     <Link to='/' className='font-bold text-2xl text-teal-500 font-serif'>Daily Quiz Booster</Link>
                     <ul className='flex'>
-                         <Link to='/topics' className='ml-6 text-cyan-600'>Topics</Link>
+                         <Link to='/' className='ml-6 text-cyan-600'>Topics</Link>
                          <Link to='/statistics' className='ml-6 text-cyan-600'>Statistics</Link>
                          <Link to='/blog' className='ml-6 text-cyan-600'>Blog</Link>
                          
