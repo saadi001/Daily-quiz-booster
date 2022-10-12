@@ -7,10 +7,10 @@ const Statistics = () => {
      // console.log(data.data);
      const { total } = data.data;
      return (
-          <div className='h-[250px] w-full'>
+          <div className='h-[400px] w-full'>
                <h1 className='text-center text-2xl mt-4'>Here is a chart of total question of topics</h1>
                <ResponsiveContainer width="100%" height="100%">
-                    <PieChart width={400} height={400}>
+                    <PieChart width={600} height={800}>
                          <Pie
                               dataKey="total"
                               isAnimationActive={false}

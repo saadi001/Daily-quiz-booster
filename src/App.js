@@ -6,16 +6,17 @@ import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
 import LandingPage from './Components/LandingPage/LandingPage';
 import NotFound from './Components/NotFound/NotFound';
+import QuizDetail from './Components/QuizDetail/QuizDetail';
 
 
 function App() {
   const router = createBrowserRouter([
     {path:'/', element: <Main></Main>, children:[
         {path: '/',
-        loader: async () => {
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-        },  
-         element: <LandingPage></LandingPage>},
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },  
+          element: <LandingPage></LandingPage>},
         {path: '/topics',
             loader: async () => {
               return fetch('https://openapi.programming-hero.com/api/quiz')
@@ -26,7 +27,12 @@ function App() {
               return fetch('https://openapi.programming-hero.com/api/quiz')
             },  
             element: <Statistics></Statistics>},
-        {path: '/blog', element: <Blog></Blog>}
+        {path: '/blog', element: <Blog></Blog>},
+        {path: '/quizTopic/:quizId',
+          loader: async({params}) =>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element:<QuizDetail></QuizDetail>}
     ]},
     
     {path: '*', element:<NotFound></NotFound>}
