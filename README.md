@@ -1,5 +1,8 @@
 # This is a educational quiz website made react.js
 
+### live site link: 
+https://bespoke-beignet-9e946d.netlify.app/
+
 
 ## Details about this website
 

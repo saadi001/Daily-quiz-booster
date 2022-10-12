@@ -27,9 +27,9 @@ const Option = ({ option, quiz }) => {
                <div>
                     <EyeIcon onClick={() => showCorrectAns(quiz.correctAnswer)} className="h-5 w-5 absolute top-1 right-2 cursor-pointer" />
                </div>
-               <div className='absolute md:top-[-25px] top-[-30px] md:left-[35%] left-[10%]'>
+               <div className='absolute md:top-[-25px] top-[-30px] md:left-[30%] left-[10%]'>
                     {
-                         showAns ? <div> Correct Answer: {quiz.correctAnswer}</div> : ''
+                         showAns ? <div className='text-cyan-700'> Correct Answer: {quiz.correctAnswer}</div> : ''
                     }
                </div>
           </div>
