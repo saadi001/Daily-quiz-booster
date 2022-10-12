@@ -1,7 +1,7 @@
 # This is a educational quiz website made react.js
 
 
-## Details about this website of me
+## Details about this website
 
 Here is the website details you want to read:
 
